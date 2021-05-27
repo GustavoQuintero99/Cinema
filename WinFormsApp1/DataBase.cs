@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
 using System.Windows.Forms;
 
@@ -110,6 +111,39 @@ namespace WinFormsApp1
             catch (System.Exception) { MessageBox.Show("a"); }
             return table;
 
+        }
+
+        public Account AccountExist(string user, string pass) {
+            
+            Account account= new Account();
+
+            conection();
+            MySqlConnection conn = new MySqlConnection(builder.ToString());
+            MySqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT * FROM Account WHERE Email='" + user + "' AND Password ='" + pass + "'";
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            try
+            {
+                MySqlDataReader reader;
+                reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        account.Id = reader.GetInt32(0);
+                        account.Name = reader.GetString(1);
+                    }
+                    MessageBox.Show("BIENVENIDO " + account.Name + " ");
+                }
+                else {
+                    account = null;
+                }
+
+            }
+            catch (Exception e) { MessageBox.Show(e.Message); }
+
+            return account;
         }
 
 

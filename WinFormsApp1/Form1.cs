@@ -15,11 +15,20 @@ namespace WinFormsApp1
     public partial class Form1 : Form
     {
         int account;
+        String name;
+
+        public bool open;
+
+        private Form activateForm = null;
+
+        public int Account { get => account; set => account = value; }
+        public string Name1 { get => name; set => name = value; }
+        public string Account1 { get; internal set; }
+
         public Form1()
         {
             InitializeComponent();
             customizeDesign();
-
         }
 
         #region PanelHiding
@@ -135,15 +144,13 @@ namespace WinFormsApp1
             panelContainer.Show();
             hideSubMenu();
         }
-        private Form activateForm = null;
 
-        public int Account { get => account; set => account = value; }
 
         private void openChildForm(Form childForm)
         {
 
             if (activateForm != null)
-                activateForm.Close();
+            activateForm.Close();
             activateForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -166,8 +173,25 @@ namespace WinFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            account = 0;
             openChildForm(new Form4());
+        }
+
+        private void login_Click(object sender, EventArgs e)
+        {
+            Form6 login;
+
+            if (this.account.Equals(0) && open.Equals(false))
+            {
+                login = new Form6(this);
+                login.Visible = true;
+                open = true;
+                this.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("nosepuedenohaytortillas");
+            }
+   
         }
     }
 

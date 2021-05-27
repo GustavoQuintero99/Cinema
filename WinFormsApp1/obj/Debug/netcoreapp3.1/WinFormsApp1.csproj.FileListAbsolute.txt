@@ -53,3 +53,4 @@ D:\universidad\ProyectoGraficos\Cinema\WinFormsApp1\obj\Debug\netcoreapp3.1\WinF
 D:\universidad\ProyectoGraficos\Cinema\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.pdb
 D:\universidad\ProyectoGraficos\Cinema\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.genruntimeconfig.cache
 D:\universidad\ProyectoGraficos\Cinema\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.Form4.resources
+D:\universidad\ProyectoGraficos\Cinema\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.Form6.resources

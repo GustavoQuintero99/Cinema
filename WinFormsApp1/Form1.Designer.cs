@@ -42,7 +42,6 @@ namespace WinFormsApp1
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.panelDulceria = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -61,13 +60,14 @@ namespace WinFormsApp1
             this.panelContainer = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.login = new System.Windows.Forms.Button();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.panelDulceria.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -80,6 +80,7 @@ namespace WinFormsApp1
             this.panelContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -213,7 +214,8 @@ namespace WinFormsApp1
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(36)))), ((int)(((byte)(100)))));
-            this.panel2.Controls.Add(this.pictureBox11);
+            this.panel2.Controls.Add(this.pictureBox12);
+            this.panel2.Controls.Add(this.login);
             this.panel2.Controls.Add(this.buttonLogin);
             this.panel2.Controls.Add(this.panelDulceria);
             this.panel2.Controls.Add(this.pictureBox8);
@@ -227,28 +229,15 @@ namespace WinFormsApp1
             this.panel2.Size = new System.Drawing.Size(357, 1045);
             this.panel2.TabIndex = 1;
             // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox11.Image = global::WinFormsApp1.Properties.Resources._1243949;
-            this.pictureBox11.Location = new System.Drawing.Point(287, 981);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(43, 50);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 6;
-            this.pictureBox11.TabStop = false;
-            // 
             // buttonLogin
             // 
             this.buttonLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonLogin.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.buttonLogin.FlatAppearance.BorderSize = 0;
             this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonLogin.ForeColor = System.Drawing.Color.White;
             this.buttonLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonLogin.Location = new System.Drawing.Point(0, 970);
+            this.buttonLogin.Location = new System.Drawing.Point(0, 517);
             this.buttonLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(357, 75);
@@ -488,6 +477,38 @@ namespace WinFormsApp1
             this.pictureBox9.TabIndex = 7;
             this.pictureBox9.TabStop = false;
             // 
+            // login
+            // 
+            this.login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.login.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.login.FlatAppearance.BorderSize = 0;
+            this.login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.login.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.login.ForeColor = System.Drawing.Color.White;
+            this.login.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.login.Location = new System.Drawing.Point(0, 970);
+            this.login.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.login.Name = "login";
+            this.login.Size = new System.Drawing.Size(357, 75);
+            this.login.TabIndex = 11;
+            this.login.Text = "Login";
+            this.login.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.login.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.login.UseVisualStyleBackColor = true;
+            this.login.Click += new System.EventHandler(this.login_Click);
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox12.Image = global::WinFormsApp1.Properties.Resources._1243949;
+            this.pictureBox12.Location = new System.Drawing.Point(291, 981);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(43, 50);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox12.TabIndex = 12;
+            this.pictureBox12.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -511,7 +532,6 @@ namespace WinFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.panelDulceria.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -524,6 +544,7 @@ namespace WinFormsApp1
             this.panelContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -559,7 +580,8 @@ namespace WinFormsApp1
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.Button login;
     }
 }
 
