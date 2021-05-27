@@ -73,6 +73,26 @@ namespace WinFormsApp1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1243949 {
+            get {
+                object obj = ResourceManager.GetObject("1243949", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1828453 {
+            get {
+                object obj = ResourceManager.GetObject("1828453", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _18289011 {
             get {
                 object obj = ResourceManager.GetObject("18289011", resourceCulture);
@@ -126,6 +146,16 @@ namespace WinFormsApp1.Properties {
         internal static System.Drawing.Bitmap _61 {
             get {
                 object obj = ResourceManager.GetObject("61", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap clipart3366677 {
+            get {
+                object obj = ResourceManager.GetObject("clipart3366677", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

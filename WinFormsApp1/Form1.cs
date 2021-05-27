@@ -8,22 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-using MySql.Data.MySqlClient;
+
 
 namespace WinFormsApp1
 {
     public partial class Form1 : Form
     {
+        int account;
         public Form1()
         {
             InitializeComponent();
             customizeDesign();
+
         }
 
         #region PanelHiding
         private void customizeDesign()
         {
-
             panelPeliculas.Visible = false;
         }
 
@@ -118,6 +119,7 @@ namespace WinFormsApp1
         private void button6_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -134,6 +136,9 @@ namespace WinFormsApp1
             hideSubMenu();
         }
         private Form activateForm = null;
+
+        public int Account { get => account; set => account = value; }
+
         private void openChildForm(Form childForm)
         {
 
@@ -153,42 +158,20 @@ namespace WinFormsApp1
         {
 
         }
+
+        private void panelContainer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            account = 0;
+            openChildForm(new Form4());
+        }
     }
 
 
 
 
 }
-
-/*
-             string query = "SELECT * FROM Movies";
-            string connection_string = "datasource=database-1.cx1u3ws4yndt.us-east-2.rds.amazonaws.com;port=3306;username=cutrebirth;password=rebirth2021;database=CineManagement;";
-            MySqlConnection connection = new MySqlConnection(connection_string);
-            MySqlCommand comm = new MySqlCommand(query, connection);
-            comm.CommandTimeout = 60;
-            MySqlDataReader reader;
-            try
-            {
-                connection.Open();
-                reader = comm.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        MessageBox.Show(reader.GetString(1));
-
-                    }
-
-                }
-                else
-                {
-                    MessageBox.Show("No contiene informacion");
-                }
-                
-                connection.Close();
-            }
-            catch(Exception c)
-            {
-                MessageBox.Show(c.Message);
-            }
-*/

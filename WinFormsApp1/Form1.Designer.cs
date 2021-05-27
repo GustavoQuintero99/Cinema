@@ -42,10 +42,11 @@ namespace WinFormsApp1
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.buttonLogin = new System.Windows.Forms.Button();
             this.panelDulceria = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panelPeliculas = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -55,20 +56,20 @@ namespace WinFormsApp1
             this.btnBoletos = new System.Windows.Forms.Button();
             this.btnCartelera = new System.Windows.Forms.Button();
             this.btnPeliculas = new System.Windows.Forms.Button();
-            this.btnInicio = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelContainer = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.panelDulceria.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panelPeliculas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -78,6 +79,7 @@ namespace WinFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -148,17 +150,19 @@ namespace WinFormsApp1
             this.panel1.Controls.Add(this.btnCerrar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1084, 35);
+            this.panel1.Size = new System.Drawing.Size(1549, 57);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.arrastrarVentana);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::WinFormsApp1.Properties.Resources._007_clapperboard;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(17, 0);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox3.Size = new System.Drawing.Size(43, 50);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
@@ -169,9 +173,10 @@ namespace WinFormsApp1
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(44, 5);
+            this.label3.Location = new System.Drawing.Point(63, 8);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(184, 25);
+            this.label3.Size = new System.Drawing.Size(270, 36);
             this.label3.TabIndex = 2;
             this.label3.Text = "CinemaManagment";
             // 
@@ -179,9 +184,10 @@ namespace WinFormsApp1
             // 
             this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
             this.btnMinimizar.Image = global::WinFormsApp1.Properties.Resources._18289011;
-            this.btnMinimizar.Location = new System.Drawing.Point(1013, 3);
+            this.btnMinimizar.Location = new System.Drawing.Point(1447, 5);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(30, 30);
+            this.btnMinimizar.Size = new System.Drawing.Size(43, 50);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMinimizar.TabIndex = 1;
             this.btnMinimizar.TabStop = false;
@@ -193,9 +199,10 @@ namespace WinFormsApp1
             // 
             this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
             this.btnCerrar.Image = global::WinFormsApp1.Properties.Resources.icons8_close_window_64;
-            this.btnCerrar.Location = new System.Drawing.Point(1049, 3);
+            this.btnCerrar.Location = new System.Drawing.Point(1499, 5);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(30, 30);
+            this.btnCerrar.Size = new System.Drawing.Size(43, 50);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCerrar.TabIndex = 0;
             this.btnCerrar.TabStop = false;
@@ -206,36 +213,71 @@ namespace WinFormsApp1
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(36)))), ((int)(((byte)(100)))));
+            this.panel2.Controls.Add(this.pictureBox11);
+            this.panel2.Controls.Add(this.buttonLogin);
             this.panel2.Controls.Add(this.panelDulceria);
-            this.panel2.Controls.Add(this.pictureBox9);
             this.panel2.Controls.Add(this.pictureBox8);
             this.panel2.Controls.Add(this.panelPeliculas);
             this.panel2.Controls.Add(this.btnPeliculas);
-            this.panel2.Controls.Add(this.btnInicio);
             this.panel2.Controls.Add(this.panelLogo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 35);
+            this.panel2.Location = new System.Drawing.Point(0, 57);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(250, 626);
+            this.panel2.Size = new System.Drawing.Size(357, 1045);
             this.panel2.TabIndex = 1;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox11.Image = global::WinFormsApp1.Properties.Resources._1243949;
+            this.pictureBox11.Location = new System.Drawing.Point(287, 981);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(43, 50);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox11.TabIndex = 6;
+            this.pictureBox11.TabStop = false;
+            // 
+            // buttonLogin
+            // 
+            this.buttonLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonLogin.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonLogin.FlatAppearance.BorderSize = 0;
+            this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonLogin.ForeColor = System.Drawing.Color.White;
+            this.buttonLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonLogin.Location = new System.Drawing.Point(0, 970);
+            this.buttonLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonLogin.Name = "buttonLogin";
+            this.buttonLogin.Size = new System.Drawing.Size(357, 75);
+            this.buttonLogin.TabIndex = 9;
+            this.buttonLogin.Text = "DataBaseTest";
+            this.buttonLogin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonLogin.UseVisualStyleBackColor = true;
+            this.buttonLogin.Click += new System.EventHandler(this.button3_Click);
             // 
             // panelDulceria
             // 
             this.panelDulceria.Controls.Add(this.pictureBox7);
             this.panelDulceria.Controls.Add(this.button2);
             this.panelDulceria.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelDulceria.Location = new System.Drawing.Point(0, 313);
+            this.panelDulceria.Location = new System.Drawing.Point(0, 447);
+            this.panelDulceria.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelDulceria.Name = "panelDulceria";
-            this.panelDulceria.Size = new System.Drawing.Size(250, 52);
+            this.panelDulceria.Size = new System.Drawing.Size(357, 87);
             this.panelDulceria.TabIndex = 8;
             // 
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Image = global::WinFormsApp1.Properties.Resources.Dulceria;
-            this.pictureBox7.Location = new System.Drawing.Point(201, 6);
+            this.pictureBox7.Location = new System.Drawing.Point(287, 10);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox7.Size = new System.Drawing.Size(43, 50);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 5;
             this.pictureBox7.TabStop = false;
@@ -248,31 +290,22 @@ namespace WinFormsApp1
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(250, 46);
+            this.button2.Size = new System.Drawing.Size(357, 77);
             this.button2.TabIndex = 5;
             this.button2.Text = "Dulceria";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox9.Image = global::WinFormsApp1.Properties.Resources.Inicio;
-            this.pictureBox9.Location = new System.Drawing.Point(201, 109);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 7;
-            this.pictureBox9.TabStop = false;
-            // 
             // pictureBox8
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(201, 151);
+            this.pictureBox8.Location = new System.Drawing.Point(287, 182);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox8.Size = new System.Drawing.Size(43, 50);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 6;
             this.pictureBox8.TabStop = false;
@@ -287,18 +320,20 @@ namespace WinFormsApp1
             this.panelPeliculas.Controls.Add(this.btnBoletos);
             this.panelPeliculas.Controls.Add(this.btnCartelera);
             this.panelPeliculas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelPeliculas.Location = new System.Drawing.Point(0, 190);
+            this.panelPeliculas.Location = new System.Drawing.Point(0, 242);
+            this.panelPeliculas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelPeliculas.Name = "panelPeliculas";
-            this.panelPeliculas.Size = new System.Drawing.Size(250, 123);
+            this.panelPeliculas.Size = new System.Drawing.Size(357, 205);
             this.panelPeliculas.TabIndex = 3;
             // 
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Image = global::WinFormsApp1.Properties.Resources.por;
-            this.pictureBox6.Location = new System.Drawing.Point(201, 86);
+            this.pictureBox6.Location = new System.Drawing.Point(287, 143);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox6.Size = new System.Drawing.Size(43, 50);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 5;
             this.pictureBox6.TabStop = false;
@@ -307,9 +342,10 @@ namespace WinFormsApp1
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::WinFormsApp1.Properties.Resources._20;
-            this.pictureBox5.Location = new System.Drawing.Point(201, 46);
+            this.pictureBox5.Location = new System.Drawing.Point(287, 77);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox5.Size = new System.Drawing.Size(43, 50);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 4;
             this.pictureBox5.TabStop = false;
@@ -318,9 +354,10 @@ namespace WinFormsApp1
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::WinFormsApp1.Properties.Resources._248231;
-            this.pictureBox4.Location = new System.Drawing.Point(201, 6);
+            this.pictureBox4.Location = new System.Drawing.Point(287, 10);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox4.Size = new System.Drawing.Size(43, 50);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
@@ -332,9 +369,10 @@ namespace WinFormsApp1
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(0, 80);
+            this.button6.Location = new System.Drawing.Point(0, 134);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(250, 40);
+            this.button6.Size = new System.Drawing.Size(357, 67);
             this.button6.TabIndex = 2;
             this.button6.Text = "   Proximos estrenos";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -348,9 +386,10 @@ namespace WinFormsApp1
             this.btnBoletos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBoletos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnBoletos.ForeColor = System.Drawing.Color.White;
-            this.btnBoletos.Location = new System.Drawing.Point(0, 40);
+            this.btnBoletos.Location = new System.Drawing.Point(0, 67);
+            this.btnBoletos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBoletos.Name = "btnBoletos";
-            this.btnBoletos.Size = new System.Drawing.Size(250, 40);
+            this.btnBoletos.Size = new System.Drawing.Size(357, 67);
             this.btnBoletos.TabIndex = 1;
             this.btnBoletos.Text = "   Comprar boletos";
             this.btnBoletos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -365,8 +404,9 @@ namespace WinFormsApp1
             this.btnCartelera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnCartelera.ForeColor = System.Drawing.Color.White;
             this.btnCartelera.Location = new System.Drawing.Point(0, 0);
+            this.btnCartelera.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCartelera.Name = "btnCartelera";
-            this.btnCartelera.Size = new System.Drawing.Size(250, 40);
+            this.btnCartelera.Size = new System.Drawing.Size(357, 67);
             this.btnCartelera.TabIndex = 0;
             this.btnCartelera.Text = "   Cartelera";
             this.btnCartelera.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -380,41 +420,24 @@ namespace WinFormsApp1
             this.btnPeliculas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPeliculas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnPeliculas.ForeColor = System.Drawing.Color.White;
-            this.btnPeliculas.Location = new System.Drawing.Point(0, 145);
+            this.btnPeliculas.Location = new System.Drawing.Point(0, 167);
+            this.btnPeliculas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPeliculas.Name = "btnPeliculas";
-            this.btnPeliculas.Size = new System.Drawing.Size(250, 45);
+            this.btnPeliculas.Size = new System.Drawing.Size(357, 75);
             this.btnPeliculas.TabIndex = 2;
             this.btnPeliculas.Text = "Peliculas";
             this.btnPeliculas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPeliculas.UseVisualStyleBackColor = true;
             this.btnPeliculas.Click += new System.EventHandler(this.btnPeliculas_Click);
             // 
-            // btnInicio
-            // 
-            this.btnInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnInicio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInicio.FlatAppearance.BorderSize = 0;
-            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnInicio.ForeColor = System.Drawing.Color.White;
-            this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInicio.Location = new System.Drawing.Point(0, 100);
-            this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(250, 45);
-            this.btnInicio.TabIndex = 1;
-            this.btnInicio.Text = "Inicio";
-            this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnInicio.UseVisualStyleBackColor = true;
-            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
-            // 
             // panelLogo
             // 
             this.panelLogo.Controls.Add(this.pictureBox1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(250, 100);
+            this.panelLogo.Size = new System.Drawing.Size(357, 167);
             this.panelLogo.TabIndex = 0;
             // 
             // pictureBox1
@@ -422,8 +445,9 @@ namespace WinFormsApp1
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::WinFormsApp1.Properties.Resources._61;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(250, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(357, 167);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -434,31 +458,47 @@ namespace WinFormsApp1
             this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(19)))), ((int)(((byte)(43)))));
             this.panelContainer.Controls.Add(this.pictureBox10);
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContainer.Location = new System.Drawing.Point(250, 35);
+            this.panelContainer.Location = new System.Drawing.Point(357, 57);
+            this.panelContainer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(834, 626);
+            this.panelContainer.Size = new System.Drawing.Size(1192, 1045);
             this.panelContainer.TabIndex = 2;
+            this.panelContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContainer_Paint);
             // 
             // pictureBox10
             // 
             this.pictureBox10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox10.Image = global::WinFormsApp1.Properties.Resources._6;
-            this.pictureBox10.Location = new System.Drawing.Point(289, 161);
+            this.pictureBox10.Location = new System.Drawing.Point(414, 269);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(274, 204);
+            this.pictureBox10.Size = new System.Drawing.Size(391, 340);
             this.pictureBox10.TabIndex = 0;
             this.pictureBox10.TabStop = false;
             // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox9.Image = global::WinFormsApp1.Properties.Resources.Inicio;
+            this.pictureBox9.Location = new System.Drawing.Point(231, 192);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(43, 50);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 7;
+            this.pictureBox9.TabStop = false;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1084, 661);
+            this.ClientSize = new System.Drawing.Size(1549, 1102);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
@@ -471,9 +511,9 @@ namespace WinFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.panelDulceria.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panelPeliculas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -483,6 +523,7 @@ namespace WinFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -499,7 +540,6 @@ namespace WinFormsApp1
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelLogo;
-        private System.Windows.Forms.Button btnInicio;
         private System.Windows.Forms.Panel panelPeliculas;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button btnBoletos;
@@ -509,7 +549,6 @@ namespace WinFormsApp1
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox6;
@@ -518,6 +557,9 @@ namespace WinFormsApp1
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panelContainer;
         private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.Button buttonLogin;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox11;
     }
 }
 
