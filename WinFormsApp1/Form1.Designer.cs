@@ -307,6 +307,7 @@ namespace WinFormsApp1
             this.button2.Text = "Dulceria";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // pictureBox8
             // 
