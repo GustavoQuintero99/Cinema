@@ -15,11 +15,18 @@ namespace WinFormsApp1
     public partial class Form1 : Form
     {
         int account;
+        String name;
+        public bool active_session = false;
+        private Form activateForm = null;
+        
+        public int Account { get => account; set => account = value; }
+        public string Name1 { get => name; set => name = value; }
+        public string Account1 { get; internal set; }
+
         public Form1()
         {
             InitializeComponent();
             customizeDesign();
-
         }
 
         #region PanelHiding
@@ -135,15 +142,13 @@ namespace WinFormsApp1
             panelContainer.Show();
             hideSubMenu();
         }
-        private Form activateForm = null;
 
-        public int Account { get => account; set => account = value; }
 
         private void openChildForm(Form childForm)
         {
 
             if (activateForm != null)
-                activateForm.Close();
+            activateForm.Close();
             activateForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -166,12 +171,41 @@ namespace WinFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            account = 0;
             openChildForm(new Form4());
         }
+
+        private void login_Click(object sender, EventArgs e)
+        {
+            Form6 login_form;
+            if (active_session == false)
+            {
+                login_form = new Form6(this);
+                login_form.Visible = true;
+                this.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("Ha cerrado sesion de manera correcta");
+                active_session = false;
+                account = 0;
+                name = null;
+                login.Text = "Login";
+            }
+
+        }
+
+        public void EnableLoguin(Account usuario)
+        { 
+            login.Text = "Log out";
+            account = usuario.Id;
+            name = usuario.Name;
+            active_session = true;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
-
-
-
 
 }
