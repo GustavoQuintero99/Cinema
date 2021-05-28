@@ -16,11 +16,9 @@ namespace WinFormsApp1
     {
         int account;
         String name;
-
-        public bool open;
-
+        public bool active_session = false;
         private Form activateForm = null;
-
+        
         public int Account { get => account; set => account = value; }
         public string Name1 { get => name; set => name = value; }
         public string Account1 { get; internal set; }
@@ -178,24 +176,36 @@ namespace WinFormsApp1
 
         private void login_Click(object sender, EventArgs e)
         {
-            Form6 login;
-
-            if (this.account.Equals(0) && open.Equals(false))
+            Form6 login_form;
+            if (active_session == false)
             {
-                login = new Form6(this);
-                login.Visible = true;
-                open = true;
+                login_form = new Form6(this);
+                login_form.Visible = true;
                 this.Enabled = false;
             }
             else
             {
-                MessageBox.Show("nosepuedenohaytortillas");
+                MessageBox.Show("Ha cerrado sesion de manera correcta");
+                active_session = false;
+                account = 0;
+                name = null;
+                login.Text = "Login";
             }
-   
+
+        }
+
+        public void EnableLoguin(Account usuario)
+        { 
+            login.Text = "Log out";
+            account = usuario.Id;
+            name = usuario.Name;
+            active_session = true;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
-
-
-
 
 }

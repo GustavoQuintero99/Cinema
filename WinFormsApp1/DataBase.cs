@@ -134,7 +134,7 @@ namespace WinFormsApp1
                         account.Id = reader.GetInt32(0);
                         account.Name = reader.GetString(1);
                     }
-                    MessageBox.Show("BIENVENIDO " + account.Name + " ");
+                    MessageBox.Show("Bienvenido " + account.Name + " ");
                 }
                 else {
                     account = null;
@@ -144,6 +144,23 @@ namespace WinFormsApp1
             catch (Exception e) { MessageBox.Show(e.Message); }
 
             return account;
+        }
+
+        public bool RegisterAccount(string user,string password,string phone,string mail)
+        {
+            conection();
+            MySqlConnection conn = new MySqlConnection(builder.ToString());
+            MySqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "INSERT INTO `CineManagement`.`Account` (`Name`, `Phone`, `Email`, `Password`, `Membership`) VALUES ('"+user+"',"+phone+", '"+mail+"', '"+password+"', '4')";
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            try
+            {
+                MySqlDataReader reader;
+                reader = cmd.ExecuteReader();
+                return true;
+            }
+            catch (Exception e) { MessageBox.Show(e.Message);  return false; }
         }
 
 

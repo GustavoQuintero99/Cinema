@@ -4,7 +4,7 @@ using System.Text;
 
 namespace WinFormsApp1
 {
-    class Account
+    public class Account
     {
         int id;
         string name;

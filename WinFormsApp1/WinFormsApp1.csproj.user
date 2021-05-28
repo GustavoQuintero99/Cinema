@@ -19,5 +19,8 @@
     <Compile Update="GradientPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Update="Registercs.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

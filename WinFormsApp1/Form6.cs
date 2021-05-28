@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace WinFormsApp1
 {
@@ -16,6 +17,13 @@ namespace WinFormsApp1
             InitializeComponent();
             this.principal = principal;
         }
+
+        #region Moviemiento_Ventana
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        #endregion
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -49,14 +57,13 @@ namespace WinFormsApp1
             DataBase search = new DataBase();
             Account us=search.AccountExist(userB,passB);
             if (us != null) {
-
+                this.principal.EnableLoguin(us);
                 this.Close();
-                principal.open = false;
+                principal.Activate();
                 principal.Enabled = true;
             }
             else
             {
-
                 MessageBox.Show("DATOS INCORRECTOS");
             }
 
@@ -65,9 +72,24 @@ namespace WinFormsApp1
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
-            principal.open = false;
             principal.Enabled = true;
             this.Close();
+        }
+
+        private void test(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void register_Click(object sender, EventArgs e)
+        {
+            Registercs register;
+
+            register = new Registercs(this);
+            register.Visible = true;
+            this.Enabled = false;
+            
         }
     }
 }
