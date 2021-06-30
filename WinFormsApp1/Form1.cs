@@ -118,7 +118,7 @@ namespace WinFormsApp1
 
         private void btnBoletos_Click(object sender, EventArgs e)
         {
-            openChildForm(new Form3());
+            openChildForm(new Form7());
 
             hideSubMenu();
         }
@@ -205,11 +205,6 @@ namespace WinFormsApp1
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            openChildForm(new Form5());
         }
     }
 

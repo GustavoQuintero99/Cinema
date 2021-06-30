@@ -1,6 +1,9 @@
-﻿using MySql.Data.MySqlClient;
+﻿using convert;
+using MySql.Data.MySqlClient;
 using System;
 using System.Data;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
 
 namespace WinFormsApp1
@@ -161,6 +164,97 @@ namespace WinFormsApp1
                 return true;
             }
             catch (Exception e) { MessageBox.Show(e.Message);  return false; }
+        }
+        public bool registerMovie(Movie movieInformation, int seats)
+        {
+            int[] seat = new int[seats];
+            byte[] bytesToSave = ObjectToByteArray(seat);
+            string srcSeat = "./" + movieInformation.Name + ".txt";
+            File.WriteAllBytes(Path.GetFullPath(srcSeat), bytesToSave);
+            conection();
+            MySqlConnection conn = new MySqlConnection(builder.ToString());
+            MySqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "INSERT INTO `CineManagement`.`Movies` (`Name`, `Price`, `Synopsis`, `Image`, `Seat`,`Date`) VALUES ('" + movieInformation.Name + "'," + movieInformation.Price + ", '" + movieInformation.Synopsys + "', '" + movieInformation.Image + "', '" + srcSeat + "', '" + movieInformation.Date + "')";
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            try
+            {
+                MySqlDataReader reader;
+                reader = cmd.ExecuteReader();
+                return true;
+            }
+            catch (Exception e) { MessageBox.Show(e.Message); return false; }
+        }
+
+        public Movie MovieInformation(int ID)
+        {
+
+            Movie movieinfo = new Movie();
+            conection();
+            MySqlConnection conn = new MySqlConnection(builder.ToString());
+            MySqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT * FROM Movies WHERE ID='" + ID + "'";
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            try
+            {
+                MySqlDataReader reader;
+                reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    int index = 0;
+                    while (reader.Read())
+                    {
+                        movieinfo.ID1 = reader.GetInt32(0);
+                        movieinfo.Name = reader.GetString(1);
+                        movieinfo.Price = reader.GetInt32(2);
+                        movieinfo.Synopsys = reader.GetString(3);
+                        movieinfo.Image = reader.GetString(4);
+                        movieinfo.Seat = reader.GetString(5);
+                        movieinfo.Date = (DateTime)reader.GetMySqlDateTime(6);
+                    }
+                    MessageBox.Show("Se armo la machaca");
+                }
+                else
+                {
+                    movieinfo = null;
+                    MessageBox.Show("Sabe que salio mal krnal");
+                }
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                MessageBox.Show(e + "");
+            }
+
+            return movieinfo;
+        }
+
+
+        private byte[] ObjectToByteArray(Object obj)
+        {
+            if (obj == null)
+                return null;
+
+            BinaryFormatter bf = new BinaryFormatter();
+            MemoryStream ms = new MemoryStream();
+            bf.Serialize(ms, obj);
+
+            return ms.ToArray();
+        }
+
+        // Convert a byte array to an Object
+        private Object ByteArrayToObject(byte[] arrBytes)
+        {
+
+            MemoryStream memStream = new MemoryStream();
+            BinaryFormatter binForm = new BinaryFormatter();
+            memStream.Write(arrBytes, 0, arrBytes.Length);
+            memStream.Seek(0, SeekOrigin.Begin);
+            Object obj = (Object)binForm.Deserialize(memStream);
+
+            return obj;
         }
 
 

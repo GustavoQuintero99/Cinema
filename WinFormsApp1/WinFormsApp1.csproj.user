@@ -19,6 +19,9 @@
     <Compile Update="Form6.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Form7.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GradientPanel.cs">
       <SubType>Component</SubType>
     </Compile>
