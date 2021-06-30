@@ -17,12 +17,22 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

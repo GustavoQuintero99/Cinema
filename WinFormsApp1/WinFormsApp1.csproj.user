@@ -25,5 +25,8 @@
     <Compile Update="Registercs.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Containers\CandyContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

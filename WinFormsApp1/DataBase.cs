@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Data;
+using System.IO;
 using System.Windows.Forms;
 
 namespace WinFormsApp1
@@ -88,6 +89,50 @@ namespace WinFormsApp1
             }
             catch (System.Exception) { MessageBox.Show("a"); }
             return table;
+
+        }
+
+
+        public CandyBar CandyInfortamiton(int ID) {
+
+            CandyBar candyinfo = new CandyBar();
+            conection();
+            MySqlConnection conn = new MySqlConnection(builder.ToString());
+            MySqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT * FROM Candys WHERE ID='" + ID + "'";
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            try
+            {
+                MySqlDataReader reader;
+                reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        candyinfo.Id = reader.GetInt32(0);
+                        candyinfo.Name = reader.GetString(1);
+                        candyinfo.Price = reader.GetInt32(2);
+                        candyinfo.Description = reader.GetString(3);
+                        candyinfo.Image = reader.GetString(4);
+
+                    }
+                    MessageBox.Show("Hecho con exito");
+                }
+                else
+                {
+                    candyinfo = null;
+                    MessageBox.Show("Algo salio mal");
+                }
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                MessageBox.Show(e + "");
+            }
+
+            return candyinfo;
 
         }
 

@@ -14,6 +14,7 @@ namespace WinFormsApp1
         {
             InitializeComponent();
             customizeDesign();
+            DataBase dataConn = new DataBase();
         }
 
         private void customizeDesign()
