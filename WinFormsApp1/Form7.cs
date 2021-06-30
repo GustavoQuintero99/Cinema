@@ -20,13 +20,25 @@ namespace WinFormsApp1
         byte[] seat;
         public Form7()
         {
+
             InitializeComponent();
-            newMovie = information.MovieInformation(29);
+            newMovie = information.MovieInformation(5);
             label3.Text = newMovie.Name;
             label2.Text = newMovie.Price + "";
             textBox1.Text = newMovie.Synopsys;
             textBox1.Enabled = false;
-            seat = File.ReadAllBytes(newMovie.Seat);
+            string srcSeat = "./" + newMovie.Name + ".txt";
+            if (File.Exists(newMovie.Seat)){
+                seat = File.ReadAllBytes(newMovie.Seat);
+            }
+            else
+            {
+                int[] seat1 = new int[30];
+                byte[] bytesToSave = ObjectToByteArray(seat1);
+                File.WriteAllBytes(Path.GetFullPath(srcSeat), bytesToSave);
+                seat = File.ReadAllBytes(newMovie.Seat);
+            }
+            
             button3.Enabled = false;
             button1.Enabled = false;
 
