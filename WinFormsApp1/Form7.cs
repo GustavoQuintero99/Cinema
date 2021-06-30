@@ -21,7 +21,7 @@ namespace WinFormsApp1
         public Form7()
         {
             InitializeComponent();
-            Movie newMovie = information.MovieInformation(27);
+            Movie newMovie = information.MovieInformation(29);
             label3.Text = newMovie.Name;
             label2.Text = newMovie.Price + "";
             textBox1.Text = newMovie.Synopsys;
@@ -116,7 +116,7 @@ namespace WinFormsApp1
                     }
                     catch
                     {
-                        MessageBox.Show("jaja pinche error");
+                        MessageBox.Show("Error");
                     };
 
                 }

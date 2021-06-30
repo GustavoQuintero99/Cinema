@@ -87,3 +87,4 @@ C:\Users\gusta\Documents\bryan2\Cinema\WinFormsApp1\obj\Debug\netcoreapp3.1\WinF
 D:\universidad\ProyectoGraficos\Cinema\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.Registercs.resources
 D:\universidad\ProyectoGraficos\Cinema\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.Form5.resources
 D:\universidad\ProyectoGraficos\Cinema\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.Form7.resources
+D:\universidad\ProyectoGraficos\Cinema\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.CandyContainer.resources
