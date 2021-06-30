@@ -43,6 +43,7 @@ namespace WinFormsApp1
             this.label3 = new System.Windows.Forms.Label();
             this.panelDulces = new System.Windows.Forms.Panel();
             this.FlowLayoutPanel = new System.Windows.Forms.Panel();
+            this.candyContainer1 = new WinFormsApp1.CandyContainer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -53,7 +54,7 @@ namespace WinFormsApp1
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.candyContainer1 = new WinFormsApp1.CandyContainer();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panelPrincipal.SuspendLayout();
             this.panelBienvenida.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -70,6 +71,7 @@ namespace WinFormsApp1
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // panelPrincipal
@@ -87,7 +89,7 @@ namespace WinFormsApp1
             // 
             // panelBienvenida
             // 
-            this.panelBienvenida.BackgroundImage = global::WinFormsApp1.Properties.Resources.image_3;
+            this.panelBienvenida.BackgroundImage = global::WinFormsApp1.Properties.Resources.image_31;
             this.panelBienvenida.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelBienvenida.Controls.Add(this.pictureBox5);
             this.panelBienvenida.Controls.Add(this.label5);
@@ -133,7 +135,7 @@ namespace WinFormsApp1
             // 
             // panel4
             // 
-            this.panel4.BackgroundImage = global::WinFormsApp1.Properties.Resources.image_1;
+            this.panel4.BackgroundImage = global::WinFormsApp1.Properties.Resources.image_31;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.pictureBox2);
@@ -227,6 +229,17 @@ namespace WinFormsApp1
             this.FlowLayoutPanel.Name = "FlowLayoutPanel";
             this.FlowLayoutPanel.Size = new System.Drawing.Size(839, 397);
             this.FlowLayoutPanel.TabIndex = 3;
+            // 
+            // candyContainer1
+            // 
+            this.candyContainer1.Description = null;
+            this.candyContainer1.Image = null;
+            this.candyContainer1.Location = new System.Drawing.Point(0, 0);
+            this.candyContainer1.Name = "candyContainer1";
+            this.candyContainer1.Name1 = null;
+            this.candyContainer1.Price = null;
+            this.candyContainer1.Size = new System.Drawing.Size(840, 214);
+            this.candyContainer1.TabIndex = 0;
             // 
             // panel1
             // 
@@ -331,6 +344,7 @@ namespace WinFormsApp1
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.pictureBox6);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -362,16 +376,16 @@ namespace WinFormsApp1
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // candyContainer1
+            // pictureBox6
             // 
-            this.candyContainer1.Description = null;
-            this.candyContainer1.Image = null;
-            this.candyContainer1.Location = new System.Drawing.Point(0, 0);
-            this.candyContainer1.Name = "candyContainer1";
-            this.candyContainer1.Name1 = null;
-            this.candyContainer1.Price = null;
-            this.candyContainer1.Size = new System.Drawing.Size(840, 214);
-            this.candyContainer1.TabIndex = 0;
+            this.pictureBox6.Image = global::WinFormsApp1.Properties.Resources.Inicio;
+            this.pictureBox6.Location = new System.Drawing.Point(795, 0);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 5;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // Form5
             // 
@@ -405,6 +419,7 @@ namespace WinFormsApp1
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -436,5 +451,6 @@ namespace WinFormsApp1
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel FlowLayoutPanel;
         private CandyContainer candyContainer1;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }
