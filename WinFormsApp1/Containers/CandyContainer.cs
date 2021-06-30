@@ -19,34 +19,34 @@ namespace WinFormsApp1
         private string _name;
         private string _price;
         private string _description;
-        private string _image;
+        private Image _image;
 
         [Category("Custom Props")]
         public string Name1
         {
             get { return _name; }
-            set { _name = value; }
+            set { _name = value; lblName.Text = value; }
         }
 
         [Category("Custom Props")]
         public string Price
         {
             get { return _price; }
-            set { _price = value; }
+            set { _price = value; lblPrice.Text = value; }
         }
 
         [Category("Custom Props")]
         public string Description
         {
             get { return _description; }
-            set { _description = value; }
+            set { _description = value; lblDescription.Text = value; }
         }
 
         [Category("Custom Props")]
-        public string Image
+        public Image Image
         {
             get { return _image; }
-            set { _image = value; }
+            set { _image = value; image.Image = value; }
         }
 
         private void imageBox_Click(object sender, EventArgs e)

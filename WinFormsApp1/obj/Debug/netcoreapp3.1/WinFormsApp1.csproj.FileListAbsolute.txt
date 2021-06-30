@@ -102,7 +102,6 @@ C:\Users\Miltonmzr\source\repos\Cinema\WinFormsApp1\bin\Debug\netcoreapp3.1\K4os
 C:\Users\Miltonmzr\source\repos\Cinema\WinFormsApp1\bin\Debug\netcoreapp3.1\MySql.Data.dll
 C:\Users\Miltonmzr\source\repos\Cinema\WinFormsApp1\bin\Debug\netcoreapp3.1\Ubiety.Dns.Core.dll
 C:\Users\Miltonmzr\source\repos\Cinema\WinFormsApp1\bin\Debug\netcoreapp3.1\Zstandard.Net.dll
-C:\Users\Miltonmzr\source\repos\Cinema\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.csprojAssemblyReference.cache
 C:\Users\Miltonmzr\source\repos\Cinema\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.CandyContainer.resources
 C:\Users\Miltonmzr\source\repos\Cinema\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.Form1.resources
 C:\Users\Miltonmzr\source\repos\Cinema\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.Form2.resources
@@ -121,3 +120,4 @@ C:\Users\Miltonmzr\source\repos\Cinema\WinFormsApp1\obj\Debug\netcoreapp3.1\WinF
 C:\Users\Miltonmzr\source\repos\Cinema\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.dll
 C:\Users\Miltonmzr\source\repos\Cinema\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.pdb
 C:\Users\Miltonmzr\source\repos\Cinema\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.genruntimeconfig.cache
+C:\Users\Miltonmzr\source\repos\Cinema\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.csprojAssemblyReference.cache
