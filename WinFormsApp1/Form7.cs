@@ -16,12 +16,12 @@ namespace WinFormsApp1
     {
         int[] array;
         DataBase information = new DataBase();
-        Movie newMovie = new Movie();
+        Movie newMovie;
         byte[] seat;
         public Form7()
         {
             InitializeComponent();
-            Movie newMovie = information.MovieInformation(29);
+            newMovie = information.MovieInformation(29);
             label3.Text = newMovie.Name;
             label2.Text = newMovie.Price + "";
             textBox1.Text = newMovie.Synopsys;
@@ -69,6 +69,7 @@ namespace WinFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
+            seat = File.ReadAllBytes(newMovie.Seat);
             button3.Enabled = true;
             this.array = (int[])ByteArrayToObject(seat);
             int index = 0;
@@ -87,17 +88,6 @@ namespace WinFormsApp1
             button2.Enabled = false;
 
         }
-        private Object ByteArrayToObject(byte[] arrBytes)
-        {
-
-            MemoryStream memStream = new MemoryStream();
-            BinaryFormatter binForm = new BinaryFormatter();
-            memStream.Write(arrBytes, 0, arrBytes.Length);
-            memStream.Seek(0, SeekOrigin.Begin);
-            Object obj = (Object)binForm.Deserialize(memStream);
-
-            return obj;
-        }
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -105,7 +95,7 @@ namespace WinFormsApp1
             position = 0;
             foreach (int value in this.array)
             {
-                if (value == 2)
+                if (value !=0 && value != 3)
                 {
                     try
                     {
@@ -122,6 +112,55 @@ namespace WinFormsApp1
                 }
                 position++;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        { int position = 0;
+            foreach(int index in this.array)
+            {
+                if (index == 2)
+                {
+                    try
+                    {
+                        this.array[position] = 3;
+                    }
+                    catch { MessageBox.Show("Error");};
+
+                }
+                position++;
+            }
+            string srcSeat = "./" +newMovie.Name+".txt";
+            File.Delete(srcSeat);
+            byte[] bytesToSave = ObjectToByteArray(this.array);
+            File.WriteAllBytes(Path.GetFullPath(srcSeat), bytesToSave);
+            MessageBox.Show("COMPRADOOOOOOOOOOO");
+            listBox1.Items.Clear();
+            button3.Enabled = false;
+            button2.Enabled = true;
+        }
+
+        private Object ByteArrayToObject(byte[] arrBytes)
+        {
+
+            MemoryStream memStream = new MemoryStream();
+            BinaryFormatter binForm = new BinaryFormatter();
+            memStream.Write(arrBytes, 0, arrBytes.Length);
+            memStream.Seek(0, SeekOrigin.Begin);
+            Object obj = (Object)binForm.Deserialize(memStream);
+
+            return obj;
+        }
+
+        private byte[] ObjectToByteArray(Object obj)
+        {
+            if (obj == null)
+                return null;
+
+            BinaryFormatter bf = new BinaryFormatter();
+            MemoryStream ms = new MemoryStream();
+            bf.Serialize(ms, obj);
+
+            return ms.ToArray();
         }
     }
 }
