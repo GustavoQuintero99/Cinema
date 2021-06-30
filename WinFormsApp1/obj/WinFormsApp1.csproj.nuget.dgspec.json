@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Miltonmzr\\source\\repos\\Cinema\\WinFormsApp1\\WinFormsApp1.csproj": {}
+    "D:\\universidad\\ProyectoGraficos\\Cinema\\WinFormsApp1\\WinFormsApp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Miltonmzr\\source\\repos\\Cinema\\WinFormsApp1\\WinFormsApp1.csproj": {
+    "D:\\universidad\\ProyectoGraficos\\Cinema\\WinFormsApp1\\WinFormsApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Miltonmzr\\source\\repos\\Cinema\\WinFormsApp1\\WinFormsApp1.csproj",
+        "projectUniqueName": "D:\\universidad\\ProyectoGraficos\\Cinema\\WinFormsApp1\\WinFormsApp1.csproj",
         "projectName": "WinFormsApp1",
-        "projectPath": "C:\\Users\\Miltonmzr\\source\\repos\\Cinema\\WinFormsApp1\\WinFormsApp1.csproj",
-        "packagesPath": "C:\\Users\\Miltonmzr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Miltonmzr\\source\\repos\\Cinema\\WinFormsApp1\\obj\\",
+        "projectPath": "D:\\universidad\\ProyectoGraficos\\Cinema\\WinFormsApp1\\WinFormsApp1.csproj",
+        "packagesPath": "C:\\Users\\Bryan\\.nuget\\packages\\",
+        "outputPath": "D:\\universidad\\ProyectoGraficos\\Cinema\\WinFormsApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Miltonmzr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Bryan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

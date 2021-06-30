@@ -52,17 +52,19 @@ namespace WinFormsApp1
             this.panel1.Controls.Add(this.lblPrice);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.lblName);
-            this.panel1.Location = new System.Drawing.Point(9, 10);
+            this.panel1.Location = new System.Drawing.Point(10, 13);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(821, 193);
+            this.panel1.Size = new System.Drawing.Size(938, 257);
             this.panel1.TabIndex = 0;
             // 
             // imageBox
             // 
             this.imageBox.Image = ((System.Drawing.Image)(resources.GetObject("imageBox.Image")));
-            this.imageBox.Location = new System.Drawing.Point(629, 5);
+            this.imageBox.Location = new System.Drawing.Point(719, 7);
+            this.imageBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.imageBox.Name = "imageBox";
-            this.imageBox.Size = new System.Drawing.Size(180, 180);
+            this.imageBox.Size = new System.Drawing.Size(206, 240);
             this.imageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imageBox.TabIndex = 8;
             this.imageBox.TabStop = false;
@@ -72,20 +74,22 @@ namespace WinFormsApp1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(218, 127);
+            this.button1.Location = new System.Drawing.Point(249, 169);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(158, 40);
+            this.button1.Size = new System.Drawing.Size(181, 53);
             this.button1.TabIndex = 7;
             this.button1.Text = "Comprar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(247, 97);
+            this.label5.Location = new System.Drawing.Point(282, 129);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 20);
+            this.label5.Size = new System.Drawing.Size(89, 25);
             this.label5.TabIndex = 6;
             this.label5.Text = "Cantidad";
             // 
@@ -93,9 +97,9 @@ namespace WinFormsApp1
             // 
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDescription.Location = new System.Drawing.Point(230, 70);
+            this.lblDescription.Location = new System.Drawing.Point(263, 93);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(107, 20);
+            this.lblDescription.Size = new System.Drawing.Size(138, 25);
             this.lblDescription.TabIndex = 5;
             this.lblDescription.Text = "Cantidad 200g";
             // 
@@ -104,9 +108,9 @@ namespace WinFormsApp1
             this.lblPrice.AutoSize = true;
             this.lblPrice.BackColor = System.Drawing.Color.Transparent;
             this.lblPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPrice.Location = new System.Drawing.Point(310, 40);
+            this.lblPrice.Location = new System.Drawing.Point(354, 53);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(23, 20);
+            this.lblPrice.Size = new System.Drawing.Size(31, 25);
             this.lblPrice.TabIndex = 4;
             this.lblPrice.Text = "10";
             // 
@@ -114,9 +118,9 @@ namespace WinFormsApp1
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(237, 40);
+            this.label2.Location = new System.Drawing.Point(271, 53);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 20);
+            this.label2.Size = new System.Drawing.Size(96, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "Precio:   $";
             // 
@@ -124,19 +128,20 @@ namespace WinFormsApp1
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblName.Location = new System.Drawing.Point(199, 5);
+            this.lblName.Location = new System.Drawing.Point(227, 7);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(195, 32);
+            this.lblName.Size = new System.Drawing.Size(247, 41);
             this.lblName.TabIndex = 2;
             this.lblName.Text = "Palomitas Chicas";
             // 
             // CandyContainer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CandyContainer";
-            this.Size = new System.Drawing.Size(840, 214);
+            this.Size = new System.Drawing.Size(960, 285);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox)).EndInit();
