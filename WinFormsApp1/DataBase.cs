@@ -72,7 +72,7 @@ namespace WinFormsApp1
                     {
                         account.Id = reader.GetInt32(0);
                         account.Name = reader.GetString(1);
-                        account.Membership = reader.GetInt32(4);
+                        account.Membership = reader.GetInt32(5);
                     }
                 }
                 else

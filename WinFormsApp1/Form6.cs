@@ -12,10 +12,12 @@ namespace WinFormsApp1
     public partial class Form6 : Form
     {
         Form1 principal;
-        public Form6(Form1 principal)
+        Panel memership;
+        public Form6(Form1 principal, Panel memership)
         {
             InitializeComponent();
             this.principal = principal;
+            this.memership = memership;
         }
 
         #region Moviemiento_Ventana
@@ -62,6 +64,7 @@ namespace WinFormsApp1
                 this.Close();
                 principal.Activate();
                 principal.Enabled = true;
+                memership.Visible= true;
                 if (principal.activateForm == null)
                 {
 
