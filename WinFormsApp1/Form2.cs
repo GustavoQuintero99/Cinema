@@ -13,9 +13,12 @@ namespace WinFormsApp1
     {
         DataBase dataConn = new DataBase();
         MovieInf newMovie = new MovieInf();
-        public Form2()
+        Form1 infoo;
+        public Form2(Form1 info)
         {
             InitializeComponent();
+            infoo = info;
+
 
         }
 
@@ -34,7 +37,7 @@ namespace WinFormsApp1
             {
                 foreach (MovieInf content in movieInfs)
                 {
-                    flowLayoutPanel1.Controls.Add(new MovieContainer(content.Name, content.Synopsys, content.Image));
+                    flowLayoutPanel1.Controls.Add(new MovieContainer(content.Name, content.Synopsys, content.Image, content.ID1,  infoo));
 
                 }
             }
@@ -42,7 +45,7 @@ namespace WinFormsApp1
 
         private void label2_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

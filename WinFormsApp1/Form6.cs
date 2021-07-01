@@ -62,7 +62,15 @@ namespace WinFormsApp1
                 this.Close();
                 principal.Activate();
                 principal.Enabled = true;
-                principal.activateForm.Close();
+                if (principal.activateForm == null)
+                {
+
+                }
+                else
+                {
+                    principal.activateForm.Close();
+                }
+                
             }
             else
             {

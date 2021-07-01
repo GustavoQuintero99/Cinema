@@ -10,12 +10,16 @@ namespace WinFormsApp1.Containers
 {
     public partial class MovieContainer : UserControl
     {
+        int idMovie;
+        Form1 infoo;
 
-        public MovieContainer(string _name, string _synopsys, string _image)
+        public MovieContainer(string _name, string _synopsys, string _image, int id, Form1 info)
         {
             Image image = Image.FromFile("..//..//..//Resources/" + _image);
             MovieInf movie = new MovieInf();
             InitializeComponent();
+            idMovie = id;
+            infoo = info;
             this._name = _name;
             this._synopsys = _synopsys;
             this._image = image;
@@ -53,7 +57,7 @@ namespace WinFormsApp1.Containers
 
         private void btnBuy_Click(object sender, EventArgs e)
         {
-
+            infoo.openChildForm(new Form7(infoo, idMovie));
         }
     }
 }
