@@ -156,3 +156,4 @@ C:\Users\Miltonmzr\source\repos\ProyectoGraficosgit\Cinema\WinFormsApp1\bin\Debu
 C:\Users\Miltonmzr\source\repos\ProyectoGraficosgit\Cinema\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.csproj.CopyComplete
 C:\Users\Miltonmzr\source\repos\ProyectoGraficosgit\Cinema\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.genruntimeconfig.cache
 D:\universidad\ProyectoGraficos\Cinema\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.Containers.MovieContainer.resources
+D:\universidad\ProyectoGraficos\Cinema\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.Form8.resources

@@ -130,7 +130,6 @@ namespace WinFormsApp1
         private void button6_Click(object sender, EventArgs e)
         {
             hideSubMenu();
-            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -141,7 +140,7 @@ namespace WinFormsApp1
         private void btnInicio_Click(object sender, EventArgs e)
         {
             if (ActiveForm != null)
-                activateForm.Close();
+            activateForm.Close();
             panelContainer.BringToFront();
             panelContainer.Show();
             hideSubMenu();
@@ -152,15 +151,15 @@ namespace WinFormsApp1
         {
 
             if (activateForm != null)
-            activateForm.Close();
-            activateForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            panelContainer.Controls.Add(childForm);
-            panelContainer.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
+             activateForm.Close();
+             activateForm = childForm;
+             childForm.TopLevel = false;
+             childForm.FormBorderStyle = FormBorderStyle.None;
+             childForm.Dock = DockStyle.Fill;
+             panelContainer.Controls.Add(childForm);
+             panelContainer.Tag = childForm;
+             childForm.BringToFront();
+             childForm.Show();
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
@@ -209,6 +208,7 @@ namespace WinFormsApp1
                     name = null;
                     membership = 0;
                     login.Text = "Login";
+                    panel4.Visible = false;
 
                 }
 
@@ -236,6 +236,11 @@ namespace WinFormsApp1
         }
 
         private void button8_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Form8(this));
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
         {
 
         }
