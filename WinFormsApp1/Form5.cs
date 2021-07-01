@@ -11,11 +11,12 @@ namespace WinFormsApp1
 {
     public partial class Form5 : Form
     {
+        DataBase dataConn = new DataBase();
+        CandyBar newCandy = new CandyBar();
         public Form5()
         {
             InitializeComponent();
             customizeDesign();
-            DataBase dataConn = new DataBase();
         }
 
         private void customizeDesign()
@@ -49,6 +50,19 @@ namespace WinFormsApp1
             private void button1_Click(object sender, EventArgs e)
             {
                 showSubMenu(panelPalomitas);
+                List<CandyBar> candys = dataConn.allCandys(1);
+
+            if (flowLayoutPanel3.Controls.Count > 0)
+            {
+            }
+            else
+            {
+                foreach (CandyBar content in candys)
+                {
+                    flowLayoutPanel3.Controls.Add(new CandyContainer(content.Name, content.Price + "", content.Description, content.Image));
+
+                }
+            }
             }
 
             private void button1_MouseEnter(object sender, EventArgs e)
@@ -96,12 +110,38 @@ namespace WinFormsApp1
             private void btnBebidas_Click(object sender, EventArgs e)
             {
                 showSubMenu(panelBebidas);
+                    List<CandyBar> candys = dataConn.allCandys(2);
+            if (flowLayoutPanel2.Controls.Count > 0)
+            {
+            }
+            else
+            {
+                foreach (CandyBar content in candys)
+                {
+                    flowLayoutPanel2.Controls.Add(new CandyContainer(content.Name, content.Price + "", content.Description, content.Image));
+
+                }
+            }
             }
 
-            private void btnDulces_Click(object sender, EventArgs e)
+        private void btnDulces_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelDulces);
+            List<CandyBar> candys = dataConn.allCandys(3);
+
+            if (flowLayoutPanel1.Controls.Count > 0)
             {
-                showSubMenu(panelDulces);
             }
+            else
+            {
+                foreach (CandyBar content in candys)
+                {
+                    flowLayoutPanel1.Controls.Add(new CandyContainer(content.Name, content.Price + "", content.Description, content.Image));
+
+                }
+
+            }
+        }
 
             private void gradientPanel3_Paint(object sender, PaintEventArgs e)
             {
@@ -116,36 +156,12 @@ namespace WinFormsApp1
             private void pictureBox6_Click(object sender, EventArgs e)
             {
                 this.Close();
-        }
-        #endregion
-
-        private void candyiteration() 
-        {
-            //populate it here
-            CandyContainer[] candyList = new CandyContainer[20];
-            //Loop through each item
-            for (int i = 0; i < candyList.Length; i++)
-            {
-                candyList[i] = new CandyContainer();
-                candyList[i].Name = "Prueba de fire";
-                candyList[i].Image = Resources.Dulces;
-                candyList[i].Description = "300gr";
-                candyList[i].Price = "10";
-                //ad to Flowlayout
-                 if (flowLayoutPanel1.Controls.Count < 0)
-                {
-                    flowLayoutPanel1.Controls.Clear();
-                }
-                  else
-                flowLayoutPanel1.Controls.Add(candyList[i]);
-
-
             }
-        }
+        #endregion
 
         private void Form5_Load(object sender, EventArgs e)
         {
-            candyiteration();
+
         }
     }
 }

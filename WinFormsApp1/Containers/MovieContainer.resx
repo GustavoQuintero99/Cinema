@@ -57,7 +57,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="$this.TrayHeight" type="System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>43</value>
-  </metadata>
+  <data name="lblSynopsys.Text" xml:space="preserve">
+    <value>Sinopsis: 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut mi eu libero vehicula varius. Cras ut purus leo. Sed nec neque scelerisque, tempor risus vitae, cursus tortor. Phasellus euismod congue orci, quis convallis diam convallis ut. Morbi non pellentesque magna, sit amet elementum felis. Pellentesque eget eros urna. Nunc magna nisl, tristique et semper et, auctor et magna. Curabitur ac dui eget nisi efficitur porta ultricies sit amet leo. Donec efficitur ac tortor sit amet lacinia. Vestibulum ac augue dictum lorem malesuada suscipit vitae ut augue. Duis eu est quis leo commodo ornare. Duis ullamcorper vel odio et vehicula. Etiam iaculis sollicitudin ante, maximus mollis orci posuere eu. Morbi feugiat pretium lorem nec consectetur. Sed euismod neque ac ullamcorper semper.</value>
+  </data>
 </root>

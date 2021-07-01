@@ -121,3 +121,4 @@ C:\Users\Miltonmzr\source\repos\Cinema\WinFormsApp1\obj\Debug\netcoreapp3.1\WinF
 C:\Users\Miltonmzr\source\repos\Cinema\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.pdb
 C:\Users\Miltonmzr\source\repos\Cinema\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.genruntimeconfig.cache
 C:\Users\Miltonmzr\source\repos\Cinema\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.csprojAssemblyReference.cache
+C:\Users\Miltonmzr\source\repos\Cinema\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.Containers.MovieContainer.resources

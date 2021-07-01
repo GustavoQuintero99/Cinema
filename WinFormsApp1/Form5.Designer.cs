@@ -34,10 +34,12 @@ namespace WinFormsApp1
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panelPalomitas = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelBebidas = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,7 +56,6 @@ namespace WinFormsApp1
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panelPrincipal.SuspendLayout();
             this.panelBienvenida.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -125,12 +126,22 @@ namespace WinFormsApp1
             // panelPalomitas
             // 
             this.panelPalomitas.BackColor = System.Drawing.Color.Transparent;
+            this.panelPalomitas.Controls.Add(this.flowLayoutPanel3);
             this.panelPalomitas.Controls.Add(this.panel4);
             this.panelPalomitas.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPalomitas.Location = new System.Drawing.Point(0, 1129);
             this.panelPalomitas.Name = "panelPalomitas";
             this.panelPalomitas.Size = new System.Drawing.Size(839, 543);
             this.panelPalomitas.TabIndex = 1;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.AutoScroll = true;
+            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 158);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(839, 385);
+            this.flowLayoutPanel3.TabIndex = 5;
             // 
             // panel4
             // 
@@ -167,12 +178,22 @@ namespace WinFormsApp1
             // 
             // panelBebidas
             // 
+            this.panelBebidas.Controls.Add(this.flowLayoutPanel2);
             this.panelBebidas.Controls.Add(this.panel5);
             this.panelBebidas.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBebidas.Location = new System.Drawing.Point(0, 586);
             this.panelBebidas.Name = "panelBebidas";
             this.panelBebidas.Size = new System.Drawing.Size(839, 543);
             this.panelBebidas.TabIndex = 2;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.AutoScroll = true;
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 156);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(839, 387);
+            this.flowLayoutPanel2.TabIndex = 3;
             // 
             // panel5
             // 
@@ -438,8 +459,8 @@ namespace WinFormsApp1
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private CandyContainer candyContainer1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
     }
 }

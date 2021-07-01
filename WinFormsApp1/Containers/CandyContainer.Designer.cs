@@ -31,25 +31,23 @@ namespace WinFormsApp1
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CandyContainer));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.image = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
-            this.lblPrice = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.image)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.image);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.lblDescription);
-            this.panel1.Controls.Add(this.lblPrice);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.lblName);
             this.panel1.Location = new System.Drawing.Point(9, 10);
@@ -57,16 +55,16 @@ namespace WinFormsApp1
             this.panel1.Size = new System.Drawing.Size(772, 193);
             this.panel1.TabIndex = 0;
             // 
-            // image
+            // pictureBox1
             // 
-            this.image.Image = ((System.Drawing.Image)(resources.GetObject("image.Image")));
-            this.image.Location = new System.Drawing.Point(543, -37);
-            this.image.Name = "image";
-            this.image.Size = new System.Drawing.Size(250, 250);
-            this.image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.image.TabIndex = 8;
-            this.image.TabStop = false;
-            this.image.Click += new System.EventHandler(this.imageBox_Click);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(543, -37);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(250, 250);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.imageBox_Click);
             // 
             // button1
             // 
@@ -99,17 +97,6 @@ namespace WinFormsApp1
             this.lblDescription.Text = "Cantidad 200g";
             this.lblDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblPrice
-            // 
-            this.lblPrice.BackColor = System.Drawing.Color.Transparent;
-            this.lblPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPrice.Location = new System.Drawing.Point(310, 40);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(23, 20);
-            this.lblPrice.TabIndex = 4;
-            this.lblPrice.Text = "10";
-            this.lblPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -139,7 +126,7 @@ namespace WinFormsApp1
             this.Size = new System.Drawing.Size(795, 214);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.image)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -149,10 +136,9 @@ namespace WinFormsApp1
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblDescription;
-        private System.Windows.Forms.PictureBox image;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
