@@ -239,6 +239,26 @@ namespace WinFormsApp1
             return table;
 
         }
+        public bool updateMemership(int id, int membership)
+        {
+
+            conection();
+            MySqlConnection conn = new MySqlConnection(builder.ToString());
+            MySqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "UPDATE `Account` SET `Membership` = '"+membership+"' WHERE(`ID` = '" + id +"')";
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            try
+            {
+                MySqlDataReader reader;
+                reader = cmd.ExecuteReader();
+                return true;
+                MessageBox.Show("MEMBRESIA ACTUALIZADA!");
+            }
+            catch (Exception e) { MessageBox.Show(e.Message); return false;
+                MessageBox.Show("NO SE PUDO ACTUALIZAR LA MEMBRESIA");
+            }
+        }
 
 
         public bool RegisterAccount(string user,string password,string phone,string mail)
@@ -246,13 +266,12 @@ namespace WinFormsApp1
             conection();
             MySqlConnection conn = new MySqlConnection(builder.ToString());
             MySqlCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "INSERT INTO `CineManagement`.`Account` (`Name`, `Phone`, `Email`, `Password`, `Membership`) VALUES ('"+user+"',"+phone+", '"+mail+"', '"+password+"', '4')";
+            cmd.CommandText = "INSERT INTO `CineManagement`.`Account` (`Name`, `Phone`, `Email`, `Password`, `Membership`) VALUES ('"+user+"',"+phone+", '"+mail+"', '"+password+"', '1')";
             conn.Open();
-            cmd.ExecuteNonQuery();
+
             try
             {
-                MySqlDataReader reader;
-                reader = cmd.ExecuteReader();
+                cmd.ExecuteNonQuery();
                 return true;
             }
             catch (Exception e) { MessageBox.Show(e.Message);  return false; }

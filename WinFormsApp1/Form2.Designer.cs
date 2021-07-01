@@ -54,19 +54,22 @@ namespace WinFormsApp1
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(818, 39);
+            this.panel3.Size = new System.Drawing.Size(935, 52);
             this.panel3.TabIndex = 2;
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = global::WinFormsApp1.Properties.Resources.Inicio;
-            this.pictureBox6.Location = new System.Drawing.Point(778, 0);
+            this.pictureBox6.Location = new System.Drawing.Point(889, 0);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox6.Size = new System.Drawing.Size(46, 53);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 5;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // label1
             // 
@@ -74,9 +77,9 @@ namespace WinFormsApp1
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(385, 9);
+            this.label1.Location = new System.Drawing.Point(440, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 25);
+            this.label1.Size = new System.Drawing.Size(93, 30);
             this.label1.TabIndex = 4;
             this.label1.Text = "Peliculas";
             // 
@@ -84,9 +87,10 @@ namespace WinFormsApp1
             // 
             this.pictureBox1.Image = global::WinFormsApp1.Properties.Resources._6;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(14, 3);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(37, 43);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -99,17 +103,19 @@ namespace WinFormsApp1
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(818, 113);
+            this.panel1.Size = new System.Drawing.Size(935, 151);
             this.panel1.TabIndex = 3;
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::WinFormsApp1.Properties.Resources.Filmes;
-            this.pictureBox3.Location = new System.Drawing.Point(668, 13);
+            this.pictureBox3.Location = new System.Drawing.Point(763, 17);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 79);
+            this.pictureBox3.Size = new System.Drawing.Size(114, 105);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
@@ -120,9 +126,9 @@ namespace WinFormsApp1
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 25);
+            this.label2.Location = new System.Drawing.Point(14, 33);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(569, 45);
+            this.label2.Size = new System.Drawing.Size(704, 54);
             this.label2.TabIndex = 1;
             this.label2.Text = "La mejor seleccion de peliculas para ti";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -132,27 +138,30 @@ namespace WinFormsApp1
             this.panel2.Controls.Add(this.flowLayoutPanel1);
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 39);
+            this.panel2.Location = new System.Drawing.Point(0, 52);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(818, 548);
+            this.panel2.Size = new System.Drawing.Size(935, 731);
             this.panel2.TabIndex = 4;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 113);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 151);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(818, 435);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(935, 580);
             this.flowLayoutPanel1.TabIndex = 4;
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(818, 587);
+            this.ClientSize = new System.Drawing.Size(935, 783);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
