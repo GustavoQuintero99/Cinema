@@ -185,22 +185,22 @@ namespace WinFormsApp1
                 else
                 {
 
-                    if (info.Membership == 0)
+                    if (info.Membership == 1)
                     {
                         total = bought * (newMovie.Price - 3);
                         discount = 3;
                     }
-                    else if (info.Membership == 1)
+                    else if (info.Membership == 2)
                     {
                         total = bought * (newMovie.Price - 5);
                         discount = 5;
                     }
-                    else if (info.Membership == 2)
+                    else if (info.Membership == 3)
                     {
                         total = bought * (newMovie.Price - 7);
                         discount = 7;
                     }
-                    else if (info.Membership == 3)
+                    else if (info.Membership == 4)
                     {
                         total = bought * (newMovie.Price - 10);
                         discount = 10;

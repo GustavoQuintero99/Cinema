@@ -30,6 +30,7 @@ namespace WinFormsApp1
         {
             InitializeComponent();
             customizeDesign();
+            panel4.Visible = false;
         }
 
         #region PanelHiding
@@ -182,7 +183,7 @@ namespace WinFormsApp1
             Form6 login_form;
             if (active_session == false)
             {
-                login_form = new Form6(this);
+                login_form = new Form6(this, this.panel4);
                 login_form.Visible = true;
                 this.Enabled = false;
             }
@@ -196,6 +197,7 @@ namespace WinFormsApp1
                     name = null;
                     membership = 0;
                     login.Text = "Login";
+                    panel4.Visible = false;
 
                 }
                 else
@@ -231,6 +233,11 @@ namespace WinFormsApp1
         private void button2_Click_1(object sender, EventArgs e)
         {
             openChildForm(new Form5());
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
