@@ -4,6 +4,9 @@
     <Compile Update="Containers\CandyContainer.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Containers\MovieContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
