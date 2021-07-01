@@ -47,7 +47,7 @@ namespace WinFormsApp1
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-          
+
         }
 
         private void login_Click(object sender, EventArgs e)
@@ -55,18 +55,19 @@ namespace WinFormsApp1
             string userB = user.Text;
             string passB = password.Text;
             DataBase search = new DataBase();
-            Account us=search.AccountExist(userB,passB);
-            if (us != null) {
+            Account us = search.AccountExist(userB, passB);
+            if (us != null)
+            {
                 this.principal.EnableLoguin(us);
                 this.Close();
                 principal.Activate();
                 principal.Enabled = true;
+                principal.activateForm.Close();
             }
             else
             {
                 MessageBox.Show("DATOS INCORRECTOS");
             }
-
 
         }
 
@@ -89,7 +90,7 @@ namespace WinFormsApp1
             register = new Registercs(this);
             register.Visible = true;
             this.Enabled = false;
-            
+
         }
     }
 }

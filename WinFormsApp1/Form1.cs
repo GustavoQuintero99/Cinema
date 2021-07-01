@@ -15,13 +15,16 @@ namespace WinFormsApp1
     public partial class Form1 : Form
     {
         int account;
-        String name;
+        string name;
+        int membership;
         public bool active_session = false;
-        private Form activateForm = null;
-        
+        public Form activateForm = null;
+        public Panel panel;
+
         public int Account { get => account; set => account = value; }
         public string Name1 { get => name; set => name = value; }
         public string Account1 { get; internal set; }
+        public int Membership { get => membership; set => membership = value; }
 
         public Form1()
         {
@@ -118,7 +121,7 @@ namespace WinFormsApp1
 
         private void btnBoletos_Click(object sender, EventArgs e)
         {
-            openChildForm(new Form7());
+            openChildForm(new Form7(this, 2));
 
             hideSubMenu();
         }
@@ -144,7 +147,7 @@ namespace WinFormsApp1
         }
 
 
-        private void openChildForm(Form childForm)
+        public void openChildForm(Form childForm)
         {
 
             if (activateForm != null)
@@ -185,20 +188,23 @@ namespace WinFormsApp1
             }
             else
             {
+                activateForm.Close();
                 MessageBox.Show("Ha cerrado sesion de manera correcta");
                 active_session = false;
                 account = 0;
                 name = null;
+                membership = 0;
                 login.Text = "Login";
             }
 
         }
 
         public void EnableLoguin(Account usuario)
-        { 
+        {
             login.Text = "Log out";
             account = usuario.Id;
             name = usuario.Name;
+            membership = usuario.Membership;
             active_session = true;
         }
 

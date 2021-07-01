@@ -18,36 +18,46 @@ namespace WinFormsApp1
         DataBase information = new DataBase();
         Movie newMovie;
         byte[] seat;
-        public Form7()
+        string srcSeat;
+        string seatsBought;
+        Form1 info;
+        string name;
+        int member = 0;
+        int bought;
+        int total;
+        Image image; 
+        public Form7(Form1 datosUsuario, int idMovie)
         {
 
             InitializeComponent();
-            newMovie = information.MovieInformation(5);
-            label3.Text = newMovie.Name;
-            label2.Text = newMovie.Price + "";
+            newMovie = information.MovieInformation(idMovie);
+            image = Image.FromFile("..//..//..//Resources/" + newMovie.Image);
+            pictureBox2.Image = image;
+            textBox2.Text = newMovie.Name;
+            label7.Text = "Precio por boleto: $" + newMovie.Price;
             textBox1.Text = newMovie.Synopsys;
+            dateTimePicker1.Value = newMovie.Date;
+            dateTimePicker1.Enabled = false;
             textBox1.Enabled = false;
-            string srcSeat = "./" + newMovie.Name + ".txt";
-            if (File.Exists(newMovie.Seat)){
-                seat = File.ReadAllBytes(newMovie.Seat);
+            srcSeat = newMovie.Seat;
+            info = datosUsuario;
+            name = datosUsuario.Name1;
+            member = datosUsuario.Membership;
+            if (File.Exists(newMovie.Seat))
+            {
+                seat = File.ReadAllBytes(srcSeat);
             }
             else
             {
                 int[] seat1 = new int[30];
                 byte[] bytesToSave = ObjectToByteArray(seat1);
                 File.WriteAllBytes(Path.GetFullPath(srcSeat), bytesToSave);
-                seat = File.ReadAllBytes(newMovie.Seat);
+                seat = File.ReadAllBytes(srcSeat);
             }
-            
+
             button3.Enabled = false;
             button1.Enabled = false;
 
-            /*newMovie.Name = "Milton lecter diciendo a";
-            newMovie.Price = 15;
-            newMovie.Synopsys = "chinga tu madre miltonnaaaaaaaaaaaaaaa";
-            newMovie.Image = "/RutaDeImage/";
-            newMovie.Date = DateTime.Now;
-            information.registerMovie(newMovie, 30);*/
 
         }
 
@@ -63,6 +73,7 @@ namespace WinFormsApp1
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             if (!Regex.Match(listBox1.GetItemText(listBox1.SelectedItem), "^[D][0-9]*[0-9]*$").Success)
             {
             }
@@ -73,6 +84,7 @@ namespace WinFormsApp1
                     this.array[listBox1.SelectedIndex] = 2;
                     listBox1.Items.Insert(listBox1.SelectedIndex, "Seleccionado");
                     listBox1.Items.Remove(listBox1.SelectedItem);
+                    button1.Enabled = true;
                 }
                 catch
                 {
@@ -82,9 +94,9 @@ namespace WinFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            seat = File.ReadAllBytes(newMovie.Seat);
+
+            seat = File.ReadAllBytes(srcSeat);
             button3.Enabled = true;
-            button1.Enabled = true;
             this.array = (int[])ByteArrayToObject(seat);
             int index = 0;
             foreach (int value in this.array)
@@ -107,6 +119,7 @@ namespace WinFormsApp1
         {
             int position = 0;
             position = 0;
+            button1.Enabled = false;
             foreach (int value in this.array)
             {
                 if (value != 0 && value != 3)
@@ -130,28 +143,82 @@ namespace WinFormsApp1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            int position = 0;
-            foreach (int index in this.array)
+            if (checkBox1.Checked == true)
             {
-                if (index == 2)
-                {
-                    try
-                    {
-                        this.array[position] = 3;
-                    }
-                    catch { MessageBox.Show("Error"); };
 
+                int position = 0;
+                foreach (int index in this.array)
+                {
+                    if (index == 2)
+                    {
+                        try
+                        {
+                            seatsBought += " D" + position;
+                            this.array[position] = 3;
+                            bought++;
+                        }
+                        catch { MessageBox.Show("Error"); };
+
+                    }
+                    position++;
                 }
-                position++;
+
+                File.Delete(srcSeat);
+                byte[] bytesToSave = ObjectToByteArray(this.array);
+                File.WriteAllBytes(Path.GetFullPath(srcSeat), bytesToSave);
+                listBox1.Items.Clear();
+                button3.Enabled = false;
+                button2.Enabled = true;
+                button1.Enabled = false;
+                int discount = 0;
+                checkBox1.Checked = false;
+                if (name == null)
+                {
+                    int total = bought * newMovie.Price;
+                    var ticket = new Random();
+                    int ticket1 = ticket.Next(1000);
+                    MessageBox.Show("Estimado cliente, los asientos que compro son:\n" + seatsBought + "\n por la cantidad de: $" + total + "\n Su folio para recoger los boletos en taquilla es: " + ticket1 + "\nPorfavor, guarde el folio del ticket, ya que sin el no podra recoger sus boletos y ademas este folio ya no se puede volver a conseguir");
+                    seatsBought = "";
+                    total = 0;
+                    bought = 0;
+                }
+                else
+                {
+
+                    if (info.Membership == 0)
+                    {
+                        total = bought * (newMovie.Price - 3);
+                        discount = 3;
+                    }
+                    else if (info.Membership == 1)
+                    {
+                        total = bought * (newMovie.Price - 5);
+                        discount = 5;
+                    }
+                    else if (info.Membership == 2)
+                    {
+                        total = bought * (newMovie.Price - 7);
+                        discount = 7;
+                    }
+                    else if (info.Membership == 3)
+                    {
+                        total = bought * (newMovie.Price - 10);
+                        discount = 10;
+                    }
+
+                    var ticket = new Random();
+                    int ticket1 = ticket.Next(1000);
+                    MessageBox.Show("Estimado " + info.Name1 + ", los asientos que compro son:\n" + seatsBought + "\n por la cantidad de: $" + total + "\nAplicando su descuento de membresia de nivel: " + info.Membership + "\nel cual es de $" + discount + " por boleto comprado. \nSu folio para recoger los boletos en taquilla es: " + ticket1 + " Porfavor, guarde el folio del ticket, ya que sin el no podra recoger sus boletos y ademas este folio ya no se puede volver a conseguir");
+                    seatsBought = "";
+                    total = 0;
+                    bought = 0;
+                }
             }
-            string srcSeat = "./" + newMovie.Name + ".txt";
-            File.Delete(srcSeat);
-            byte[] bytesToSave = ObjectToByteArray(this.array);
-            File.WriteAllBytes(Path.GetFullPath(srcSeat), bytesToSave);
-            MessageBox.Show("COMPRADOOOOOOOOOOO");
-            listBox1.Items.Clear();
-            button3.Enabled = false;
-            button2.Enabled = true;
+            else
+            {
+                MessageBox.Show("TIENES QUE ACEPTAR TERMINOS Y CONDICIONES!");
+            }
+
         }
 
         private byte[] ObjectToByteArray(Object obj)
@@ -176,6 +243,16 @@ namespace WinFormsApp1
             Object obj = (Object)binForm.Deserialize(memStream);
 
             return obj;
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            info.openChildForm(new Form7(info, 32));
+        }
+
+        private void pictureBox1_Click_2(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

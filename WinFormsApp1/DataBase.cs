@@ -51,26 +51,39 @@ namespace WinFormsApp1
 
         }
 
-        public DataTable SearchAccount()
+        public Account AccountExist(string user, string pass)
         {
-            DataGridView dataGridView1 = new DataGridView();
-            DataTable table = new DataTable();
+
+            Account account = new Account();
+
             conection();
+            MySqlConnection conn = new MySqlConnection(builder.ToString());
+            MySqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT * FROM Account WHERE Email='" + user + "' AND Password ='" + pass + "'";
+            conn.Open();
+            cmd.ExecuteNonQuery();
             try
             {
-                MySqlConnection conn = new MySqlConnection(builder.ToString());
-                MySqlCommand cmd = conn.CreateCommand();
-                cmd.CommandText = "";
-                conn.Open();
-                MySqlDataAdapter MyDA = new MySqlDataAdapter();
-                string sqlSelectAll = "SELECT * from Account";
-                MyDA.SelectCommand = new MySqlCommand(sqlSelectAll, conn);
-                MyDA.Fill(table);
-                conn.Close();
-            }
-            catch (System.Exception) { MessageBox.Show("a"); }
-            return table;
+                MySqlDataReader reader;
+                reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        account.Id = reader.GetInt32(0);
+                        account.Name = reader.GetString(1);
+                        account.Membership = reader.GetInt32(4);
+                    }
+                }
+                else
+                {
+                    account = null;
+                }
 
+            }
+            catch (Exception e) { MessageBox.Show(e.Message); }
+
+            return account;
         }
 
         public List<CandyBar> allCandys(int type)
@@ -149,7 +162,7 @@ namespace WinFormsApp1
                 else
                 {
                     moviesList = null;
-                    MessageBox.Show("Sabe que salio mal krnal");
+                    MessageBox.Show("Algo Salio mal");
                 }
 
             }
@@ -183,6 +196,27 @@ namespace WinFormsApp1
             return table;
 
         }
+        public DataTable SearchAccount()
+        {
+            DataGridView dataGridView1 = new DataGridView();
+            DataTable table = new DataTable();
+            conection();
+            try
+            {
+                MySqlConnection conn = new MySqlConnection(builder.ToString());
+                MySqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = "";
+                conn.Open();
+                MySqlDataAdapter MyDA = new MySqlDataAdapter();
+                string sqlSelectAll = "SELECT * from Account";
+                MyDA.SelectCommand = new MySqlCommand(sqlSelectAll, conn);
+                MyDA.Fill(table);
+                conn.Close();
+            }
+            catch (System.Exception) { }
+            return table;
+
+        }
 
         public DataTable SearchMembership()
         {
@@ -206,38 +240,6 @@ namespace WinFormsApp1
 
         }
 
-        public Account AccountExist(string user, string pass) {
-            
-            Account account= new Account();
-
-            conection();
-            MySqlConnection conn = new MySqlConnection(builder.ToString());
-            MySqlCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "SELECT * FROM Account WHERE Email='" + user + "' AND Password ='" + pass + "'";
-            conn.Open();
-            cmd.ExecuteNonQuery();
-            try
-            {
-                MySqlDataReader reader;
-                reader = cmd.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        account.Id = reader.GetInt32(0);
-                        account.Name = reader.GetString(1);
-                    }
-                    MessageBox.Show("Bienvenido " + account.Name + " ");
-                }
-                else {
-                    account = null;
-                }
-
-            }
-            catch (Exception e) { MessageBox.Show(e.Message); }
-
-            return account;
-        }
 
         public bool RegisterAccount(string user,string password,string phone,string mail)
         {
@@ -259,14 +261,13 @@ namespace WinFormsApp1
         {
             int[] seat = new int[seats];
             byte[] bytesToSave = ObjectToByteArray(seat);
-            string srcSeat = "./" + movieInformation.Name + ".txt";
+            string srcSeat = "../../../Seats/" + movieInformation.Name + ".txt";
             File.WriteAllBytes(Path.GetFullPath(srcSeat), bytesToSave);
             conection();
             MySqlConnection conn = new MySqlConnection(builder.ToString());
             MySqlCommand cmd = conn.CreateCommand();
             cmd.CommandText = "INSERT INTO `CineManagement`.`Movies` (`Name`, `Price`, `Synopsis`, `Image`, `Seat`,`Date`) VALUES ('" + movieInformation.Name + "'," + movieInformation.Price + ", '" + movieInformation.Synopsys + "', '" + movieInformation.Image + "', '" + srcSeat + "', '" + movieInformation.Date + "')";
             conn.Open();
-            cmd.ExecuteNonQuery();
             try
             {
                 MySqlDataReader reader;
@@ -292,7 +293,6 @@ namespace WinFormsApp1
                 reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {
-                    int index = 0;
                     while (reader.Read())
                     {
                         movieinfo.ID1 = reader.GetInt32(0);
@@ -303,12 +303,12 @@ namespace WinFormsApp1
                         movieinfo.Seat = reader.GetString(5);
                         movieinfo.Date = (DateTime)reader.GetMySqlDateTime(6);
                     }
-                    MessageBox.Show("Se armo la machaca");
+                    MessageBox.Show("Pelicula Cargada Con Exito!");
                 }
                 else
                 {
                     movieinfo = null;
-                    MessageBox.Show("Sabe que salio mal krnal");
+                    MessageBox.Show("Algo Salio Mal");
                 }
 
             }
