@@ -114,7 +114,7 @@ namespace WinFormsApp1
 
         private void btnCartelera_Click(object sender, EventArgs e)
         {
-            openChildForm(new Form2());
+            openChildForm(new Form2(this));
 
             hideSubMenu();
         }
@@ -188,13 +188,28 @@ namespace WinFormsApp1
             }
             else
             {
-                activateForm.Close();
-                MessageBox.Show("Ha cerrado sesion de manera correcta");
-                active_session = false;
-                account = 0;
-                name = null;
-                membership = 0;
-                login.Text = "Login";
+                if (activateForm == null)
+                {
+                    MessageBox.Show("Ha cerrado sesion de manera correcta");
+                    active_session = false;
+                    account = 0;
+                    name = null;
+                    membership = 0;
+                    login.Text = "Login";
+
+                }
+                else
+                {
+                    activateForm.Close();
+                    MessageBox.Show("Ha cerrado sesion de manera correcta");
+                    active_session = false;
+                    account = 0;
+                    name = null;
+                    membership = 0;
+                    login.Text = "Login";
+
+                }
+
             }
 
         }
