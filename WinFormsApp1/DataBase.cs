@@ -1,6 +1,7 @@
 ﻿using convert;
 using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -70,6 +71,95 @@ namespace WinFormsApp1
             catch (System.Exception) { MessageBox.Show("a"); }
             return table;
 
+        }
+
+        public List<CandyBar> allCandys(int type)
+        {
+            List<CandyBar> candys = new List<CandyBar>();
+            conection();
+            MySqlConnection conn = new MySqlConnection(builder.ToString());
+            MySqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT * FROM Candys WHERE Type='" + type + "'";
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            int index = 0;
+            try
+            {
+                MySqlDataReader reader;
+                reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+
+                    while (reader.Read())
+                    {
+                        CandyBar candy = new CandyBar();
+                        candy.Id = reader.GetInt32(0);
+                        candy.Name = reader.GetString(1);
+                        candy.Price = reader.GetInt32(2);
+                        candy.Description = reader.GetString(3);
+                        candy.Image = reader.GetString(4);
+                        candys.Add(candy);
+                        index++;
+                    }
+                }
+                else
+                {
+                    candys = null;
+                    MessageBox.Show("Sabe que salio mal krnal");
+                }
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                MessageBox.Show(e + "");
+            }
+
+            return candys;
+        }
+
+        public List<MovieInf> allMovies()
+        {
+            List<MovieInf> moviesList = new List<MovieInf>();
+            conection();
+            MySqlConnection conn = new MySqlConnection(builder.ToString());
+            MySqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT * FROM Movies";
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            int index = 0;
+            try
+            {
+                MySqlDataReader reader;
+                reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+
+                    while (reader.Read())
+                    {
+                        MovieInf movie = new MovieInf();
+                        movie.ID1 = reader.GetInt32(0);
+                        movie.Name = reader.GetString(1);
+                        movie.Synopsys = reader.GetString(3);
+                        movie.Image = reader.GetString(4);
+                        moviesList.Add(movie);
+                        index++;
+                    }
+                }
+                else
+                {
+                    moviesList = null;
+                    MessageBox.Show("Sabe que salio mal krnal");
+                }
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                MessageBox.Show(e + "");
+            }
+
+            return moviesList;
         }
 
         public DataTable SearchCandys()

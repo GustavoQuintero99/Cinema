@@ -34,16 +34,17 @@ namespace WinFormsApp1
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panelPalomitas = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelBebidas = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panelDulces = new System.Windows.Forms.Panel();
-            this.FlowLayoutPanel = new System.Windows.Forms.Panel();
-            this.candyContainer1 = new WinFormsApp1.CandyContainer();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,9 +53,9 @@ namespace WinFormsApp1
             this.btnBebidas = new System.Windows.Forms.Button();
             this.btnPalomitas = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panelPrincipal.SuspendLayout();
             this.panelBienvenida.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -65,13 +66,12 @@ namespace WinFormsApp1
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelDulces.SuspendLayout();
-            this.FlowLayoutPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelPrincipal
@@ -126,12 +126,22 @@ namespace WinFormsApp1
             // panelPalomitas
             // 
             this.panelPalomitas.BackColor = System.Drawing.Color.Transparent;
+            this.panelPalomitas.Controls.Add(this.flowLayoutPanel3);
             this.panelPalomitas.Controls.Add(this.panel4);
             this.panelPalomitas.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPalomitas.Location = new System.Drawing.Point(0, 1129);
             this.panelPalomitas.Name = "panelPalomitas";
             this.panelPalomitas.Size = new System.Drawing.Size(839, 543);
             this.panelPalomitas.TabIndex = 1;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.AutoScroll = true;
+            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 158);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(839, 385);
+            this.flowLayoutPanel3.TabIndex = 5;
             // 
             // panel4
             // 
@@ -168,12 +178,22 @@ namespace WinFormsApp1
             // 
             // panelBebidas
             // 
+            this.panelBebidas.Controls.Add(this.flowLayoutPanel2);
             this.panelBebidas.Controls.Add(this.panel5);
             this.panelBebidas.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBebidas.Location = new System.Drawing.Point(0, 586);
             this.panelBebidas.Name = "panelBebidas";
             this.panelBebidas.Size = new System.Drawing.Size(839, 543);
             this.panelBebidas.TabIndex = 2;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.AutoScroll = true;
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 156);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(839, 387);
+            this.flowLayoutPanel2.TabIndex = 3;
             // 
             // panel5
             // 
@@ -213,7 +233,7 @@ namespace WinFormsApp1
             // 
             // panelDulces
             // 
-            this.panelDulces.Controls.Add(this.FlowLayoutPanel);
+            this.panelDulces.Controls.Add(this.flowLayoutPanel1);
             this.panelDulces.Controls.Add(this.panel1);
             this.panelDulces.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelDulces.Location = new System.Drawing.Point(0, 43);
@@ -221,25 +241,14 @@ namespace WinFormsApp1
             this.panelDulces.Size = new System.Drawing.Size(839, 543);
             this.panelDulces.TabIndex = 1;
             // 
-            // FlowLayoutPanel
+            // flowLayoutPanel1
             // 
-            this.FlowLayoutPanel.Controls.Add(this.candyContainer1);
-            this.FlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FlowLayoutPanel.Location = new System.Drawing.Point(0, 146);
-            this.FlowLayoutPanel.Name = "FlowLayoutPanel";
-            this.FlowLayoutPanel.Size = new System.Drawing.Size(839, 397);
-            this.FlowLayoutPanel.TabIndex = 3;
-            // 
-            // candyContainer1
-            // 
-            this.candyContainer1.Description = null;
-            this.candyContainer1.Image = null;
-            this.candyContainer1.Location = new System.Drawing.Point(0, 0);
-            this.candyContainer1.Name = "candyContainer1";
-            this.candyContainer1.Name1 = null;
-            this.candyContainer1.Price = null;
-            this.candyContainer1.Size = new System.Drawing.Size(840, 214);
-            this.candyContainer1.TabIndex = 0;
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 146);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(839, 397);
+            this.flowLayoutPanel1.TabIndex = 3;
             // 
             // panel1
             // 
@@ -298,7 +307,7 @@ namespace WinFormsApp1
             this.btnDulces.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDulces.Location = new System.Drawing.Point(555, 0);
             this.btnDulces.Name = "btnDulces";
-            this.btnDulces.Size = new System.Drawing.Size(253, 41);
+            this.btnDulces.Size = new System.Drawing.Size(283, 41);
             this.btnDulces.TabIndex = 2;
             this.btnDulces.Text = "Dulces";
             this.btnDulces.UseVisualStyleBackColor = false;
@@ -353,6 +362,17 @@ namespace WinFormsApp1
             this.panel3.Size = new System.Drawing.Size(841, 39);
             this.panel3.TabIndex = 1;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::WinFormsApp1.Properties.Resources.Inicio;
+            this.pictureBox6.Location = new System.Drawing.Point(795, 0);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 5;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -376,17 +396,6 @@ namespace WinFormsApp1
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::WinFormsApp1.Properties.Resources.Inicio;
-            this.pictureBox6.Location = new System.Drawing.Point(795, 0);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 5;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
-            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -398,6 +407,7 @@ namespace WinFormsApp1
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form5";
             this.Text = "Form5";
+            this.Load += new System.EventHandler(this.Form5_Load);
             this.panelPrincipal.ResumeLayout(false);
             this.panelBienvenida.ResumeLayout(false);
             this.panelBienvenida.PerformLayout();
@@ -411,15 +421,14 @@ namespace WinFormsApp1
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panelDulces.ResumeLayout(false);
-            this.FlowLayoutPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -449,8 +458,9 @@ namespace WinFormsApp1
         private System.Windows.Forms.Panel panelBienvenida;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel FlowLayoutPanel;
-        private CandyContainer candyContainer1;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
     }
 }

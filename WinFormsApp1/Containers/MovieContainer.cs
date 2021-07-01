@@ -6,30 +6,26 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace WinFormsApp1
+namespace WinFormsApp1.Containers
 {
-    public partial class CandyContainer : UserControl
+    public partial class MovieContainer : UserControl
     {
-        
-        public CandyContainer(string _name, string _price, string _description,string _image)
+
+        public MovieContainer(string _name, string _synopsys, string _image)
         {
             Image image = Image.FromFile("..//..//..//Resources/" + _image);
-
-            CandyBar candy = new CandyBar();
+            MovieInf movie = new MovieInf();
             InitializeComponent();
             this._name = _name;
-            this._price = _price;
-            this._description = _description;
+            this._synopsys = _synopsys;
             this._image = image;
-            lblDescription.Text = this._description;
             lblName.Text = this._name;
-            label2.Text = "Precio: $" + this._price;
+            lblSynopsys.Text = "Sinopsis: \n" + this._synopsys;
             pictureBox1.Image = this._image;
-        }
 
+        }
         private string _name;
-        private string _price;
-        private string _description;
+        private string _synopsys;
         private Image _image;
 
 
@@ -42,17 +38,10 @@ namespace WinFormsApp1
         }
 
         [Category("Custom Props")]
-        public string Price
+        public string Synopsys
         {
-            get { return _price; }
-            set { _price = value; label2.Text = value; }
-        }
-
-        [Category("Custom Props")]
-        public string Description
-        {
-            get { return _description; }
-            set { _description = value; lblDescription.Text = value; }
+            get { return _synopsys; }
+            set { _synopsys = value; lblSynopsys.Text = value; }
         }
 
         [Category("Custom Props")]
@@ -62,7 +51,7 @@ namespace WinFormsApp1
             set { _image = value; pictureBox1.Image = value; }
         }
 
-        private void imageBox_Click(object sender, EventArgs e)
+        private void btnBuy_Click(object sender, EventArgs e)
         {
 
         }
