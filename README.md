@@ -1,6 +1,5 @@
 # Cinema
-##Final proyect of Graphics and Interfaces
--By:
-*Gustavo Alonso Quintero Corrales.
-*Milton Missael Zermeño Ramirez.
-*Bryan E. Ramos Avalos.
+## Final proyect of Graphics and Interfaces by:
+* Gustavo Alonso Quintero Corrales.
+* Milton Missael Zermeño Ramirez.
+* Bryan E. Ramos Avalos.
